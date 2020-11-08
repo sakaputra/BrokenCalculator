@@ -48,4 +48,16 @@ public class AppTest {
         App.processInput("divide 2");
         Assert.assertEquals("10.0\n5.0\n", outContent.toString());
     }
+
+    @Test
+    public void whenExitShouldExit() {
+        App.processInput("exit");
+        Assert.assertEquals("", outContent.toString());
+    }
+
+    @Test
+    public void whenResetShouldResetToZero() {
+        App.processInput("reset");
+        Assert.assertEquals("0.0\n", outContent.toString());
+    }
 }
